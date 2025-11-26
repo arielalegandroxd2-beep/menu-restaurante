@@ -1,0 +1,372 @@
+/* ================== ESTILOS GENERALES DEL SITIO ================== */
+
+/* Reset básico para margenes y tipografía */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuente y colores principales */
+:root {
+    
+    /* Verde bandera */
+    --color-primario: #006847;   /* VERDE BANDERA */
+    --color-secundario: #ffffff; /* BLANCO para botones y acentos */
+    --color-fondo: #fffaf3;
+    --color-texto: #222222;
+    --color-gris-claro: #f0f0f0;
+
+
+
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* ================== ENCABEZADO Y NAVEGACIÓN ================== */
+
+.site-header {
+    
+    background-color: var(--color-primario); /* Verde bandera */
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+
+}
+
+.logo span {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0.4rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+/* Estado al pasar el mouse */
+.main-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+/* Enlace activo */
+.main-nav a.active {
+   
+    background-color: var(--color-secundario); /* Blanco */
+    color: var(--color-primario);              /* Verde */
+
+
+}
+
+/* ================== CONTENIDO PRINCIPAL ================== */
+
+main {
+    padding: 2rem 1.5rem 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+/* Subtítulo debajo de títulos principales */
+.subtitulo {
+    margin-bottom: 1.5rem;
+    color: #555555;
+}
+
+/* ================== SECCIÓN HERO (PÁGINA INICIO) ================== */
+
+.hero {
+   
+    background: linear-gradient(135deg, var(--color-primario), #004b30);
+    border-radius: 1.5rem;
+    padding: 3rem 2rem;
+    color: #ffffff;
+    margin-bottom: 2.5rem;
+
+
+
+}
+
+.hero-texto h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-texto h1 span {
+    color: var(--color-secundario);
+}
+
+.hero-texto p {
+    max-width: 600px;
+    margin-bottom: 1.8rem;
+}
+
+/* Botón principal */
+.btn-primario {
+   
+    display: inline-block;
+    background-color: var(--color-secundario); /* Blanco */
+    color: var(--color-primario);              /* Verde en el texto */
+    text-decoration: none;
+    padding: 0.7rem 1.3rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: transform 0.1s, box-shadow 0.1s;
+
+
+}
+
+.btn-primario:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* Botón secundario */
+.btn-secundario {
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid var(--color-primario);
+    color: var(--color-primario);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    transition: background-color 0.1s, color 0.1s;
+}
+
+.btn-secundario:hover {
+    background-color: var(--color-primario);
+    color: #ffffff;
+}
+
+/* ================== SECCIÓN INFORMACIÓN BÁSICA ================== */
+
+.info-basica {
+    margin-bottom: 2.5rem;
+}
+
+.info-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.info-card {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+/* ================== SECCIÓN DESTACADOS ================== */
+
+.destacados {
+    margin-bottom: 2.5rem;
+}
+
+.destacados-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.destacado-item {
+    background-color: var(--color-gris-claro);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+/* ================== PÁGINA MENÚ (COMIDA) ================== */
+
+.pagina-menu h1 {
+    margin-bottom: 0.5rem;
+}
+
+.seccion-menu {
+    margin-top: 2rem;
+}
+
+/* Grid de items de menú */
+.menu-grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Tarjeta de cada platillo / bebida / postre */
+.menu-item {
+    display: flex;
+    gap: 1rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 0.9rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+}
+
+/* Imagen de cada platillo */
+.menu-item img {
+    width: 110px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 0.8rem;
+}
+
+/* Información del platillo */
+.menu-info p {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+}
+
+/* Lista de tamaños y precios */
+.sizes {
+    list-style: none;
+    font-size: 0.9rem;
+    color: #333333;
+}
+
+/* Paquetes resaltados ligeramente diferente */
+.menu-item.paquete {
+    border-left: 4px solid var(--color-secundario);
+}
+
+/* ================== GALERÍA ================== */
+
+.pagina-galeria h1 {
+    margin-bottom: 0.5rem;
+}
+
+.galeria-grid {
+    margin-top: 1rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.galeria-item {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+    text-align: center;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 0.8rem;
+    margin-bottom: 0.3rem;
+}
+
+.galeria-item figcaption {
+    font-size: 0.9rem;
+    color: #555555;
+}
+
+/* ================== PROMOCIONES ================== */
+
+.pagina-promos h1 {
+    margin-bottom: 0.5rem;
+}
+
+.promos-grid {
+    margin-top: 1rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.promo-card {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    border-left: 4px solid var(--color-primario);
+}
+
+.promo-card h2 {
+    margin-bottom: 0.4rem;
+}
+
+.promo-detalle {
+    font-size: 0.85rem;
+    color: #555555;
+}
+
+/* ================== PIE DE PÁGINA ================== */
+
+.site-footer {
+    background-color: #111111;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* ================== ESTILOS RESPONSIVOS (PANTALLAS PEQUEÑAS) ================== */
+
+@media (min-width: 600px) {
+    .info-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .destacados-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .promos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    /* En móviles, los items del menú se ponen en columna */
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-item img {
+        width: 100%;
+        height: 160px;
+    }
+
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+    }
+}
